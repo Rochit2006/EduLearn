@@ -1,0 +1,86 @@
+package com.example.edulearn
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+
+@Composable
+fun DataStructuresLessonScreen(
+    onQuizClick: () -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+
+        Text(
+            text = "🧠 Introduction to Data Structures",
+            fontSize = 28.sp
+        )
+
+        Text(
+            text = "What is a Data Structure?",
+            fontSize = 22.sp
+        )
+
+        Text(
+            text = "A data structure is a way of organizing and storing " +
+                    "data so that it can be accessed and modified efficiently.",
+            fontSize = 16.sp
+        )
+
+        Text(
+            text = "⭐ Types of Data Structures",
+            fontSize = 22.sp
+        )
+
+        Text(
+            text = "• Arrays\n" +
+                    "• Linked Lists\n" +
+                    "• Stacks\n" +
+                    "• Queues\n" +
+                    "• Trees\n" +
+                    "• Graphs",
+            fontSize = 16.sp
+        )
+
+        Text(
+            text = "📌 Example",
+            fontSize = 22.sp
+        )
+
+        Text(
+            text = "An array stores multiple elements of the same type " +
+                    "in a collection that can be accessed using an index.",
+            fontSize = 16.sp
+        )
+
+        Text(
+            text = "Data structures help programmers organize data " +
+                    "and solve problems efficiently.",
+            fontSize = 16.sp
+        )
+
+        Button(
+            onClick = onQuizClick,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("📝 Take Quiz")
+        }
+    }
+}
